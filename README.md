@@ -31,6 +31,9 @@ Manifest        | https://github.com/nebrassy/platform_manifest_twrp_aosp.git
 > [!NOTE]
 > Please don't ask for support until I add it sometime later.
 
+## Bugs:
+- Currently flashing anything through fastbootD, triggers metadata/userdata corruption.
+
 ## Checklist
 
 ### Functionality
@@ -43,7 +46,7 @@ Manifest        | https://github.com/nebrassy/platform_manifest_twrp_aosp.git
 - [x] Built-in features work normally
     - [x] ADB
         - [x] Sideload
-    - [x] FastbootD
+    - [ ] FastbootD
     - [x] Screen and brightnesss
     - [x] Touchscreen
     - [x] Unmount
