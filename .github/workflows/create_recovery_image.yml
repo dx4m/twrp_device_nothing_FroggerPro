@@ -1,4 +1,4 @@
-name: Build TWRP-14 recovery for froggerPro
+name: Build TWRP-14 recovery for FroggerPro
 
 on:
   workflow_dispatch:
@@ -50,7 +50,7 @@ jobs:
       - name: Checkout Device Tree
         uses: actions/checkout@v7
         with:
-          path: 'device/nothing/froggerPro'
+          path: 'device/nothing/FroggerPro'
 
       - name: Make and mount swapfile
         run: |
@@ -67,7 +67,7 @@ jobs:
          
           START_TIME=$(date +%s)
           source build/envsetup.sh
-          lunch twrp_froggerPro-ap2a-eng
+          lunch twrp_FroggerPro-ap2a-eng
 
           m recoveryimage
           END_TIME=$(date +%s)
@@ -83,12 +83,12 @@ jobs:
         with:
           name: recovery-img-${{ github.sha }}
           path: |
-            out/target/product/froggerPro/recovery.img
+            out/target/product/FroggerPro/recovery.img
           compression-level: 9
           archive: true
 
       - name: Create Tag
-        working-directory: 'device/nothing/froggerPro'
+        working-directory: 'device/nothing/FroggerPro'
         id: tag
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -131,7 +131,7 @@ jobs:
         uses: softprops/action-gh-release@v3
         with:
           name: 'TWRP release'
-          files: out/target/product/froggerPro/recovery.img
+          files: out/target/product/FroggerPro/recovery.img
           tag_name: ${{ steps.tag.outputs.next_tag }}
           body_path: ${{ github.workspace }}/changelog.txt
         env:

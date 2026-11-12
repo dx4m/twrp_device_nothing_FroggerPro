@@ -1,7 +1,7 @@
-# twrp_device_nothing_froggerPro
-TWRP for Nothing phone 4a pro
+# twrp_device_nothing_FroggerPro
+TWRP for Nothing Phone (4a) Pro
 
-Recovery tree for the Nothing Phone (4a) Pro, codenamed `froggerPro`.
+Recovery tree for the Nothing Phone (4a) Pro, codenamed `FroggerPro`.
 
 
 ## Information
@@ -32,7 +32,7 @@ Manifest        | https://github.com/nebrassy/platform_manifest_twrp_aosp.git
 > Please don't ask for support until I add it sometime later.
 
 ## Bugs:
-- Currently flashing anything through fastbootD, triggers metadata/userdata corruption.
+- Slot switching not working currently
 
 ## Checklist
 
@@ -46,13 +46,13 @@ Manifest        | https://github.com/nebrassy/platform_manifest_twrp_aosp.git
 - [x] Built-in features work normally
     - [x] ADB
         - [x] Sideload
-    - [ ] FastbootD
+    - [x] FastbootD
     - [x] Screen and brightnesss
     - [x] Touchscreen
     - [x] Unmount
     - [x] MTP
     - [x] Filesystem/Mounts
-    - [x] Slot switch
+    - [ ] Slot switch
     - [x] Haptics
 - [x] Settings persistence
 - [x] Data decryption
