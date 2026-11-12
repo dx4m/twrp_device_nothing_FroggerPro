@@ -14,6 +14,13 @@ on early-init
 
 on init
     start vendor.boot-qti
+    # android.hardware.boot@1.2-service is installed by TWRP with "disabled"
+    # set (see bootable/recovery/etc/init/android.hardware.boot@1.2-service.rc),
+    # so it must be started explicitly. Without it, TWRP's slot switcher
+    # (TWPartitionManager::Set_Active_Slot -> IBootControl::getService(),
+    # which is HIDL, not the AIDL vendor.boot-qti service started above)
+    # fails with "Error getting bootctrl module."
+    start boot-hal-1-2
 
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
