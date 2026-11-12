@@ -6,7 +6,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_froggerPro.mk
+    $(LOCAL_DIR)/twrp_FroggerPro.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_froggerPro-ap2a-eng
+    twrp_FroggerPro-ap2a-eng
